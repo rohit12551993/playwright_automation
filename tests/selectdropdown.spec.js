@@ -1,0 +1,10 @@
+import {test,expect} from '@playwright/test'
+
+test("select dropdown",async({page})=>{
+     await page.goto('https://testautomationpractice.blogspot.com/')
+
+     await page.locator('#country').selectOption({label:'India'})
+
+     await page.waitForTimeout(5000);
+
+})
